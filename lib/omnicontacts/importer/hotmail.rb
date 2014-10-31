@@ -11,11 +11,11 @@ module OmniContacts
 
       def initialize app, client_id, client_secret, options ={}
         super app, client_id, client_secret, options
-        @auth_host = "oauth.live.com"
         @auth_host = "login.live.com"
         @authorize_path = "/oauth20_authorize.srf"
         @scope = options[:permissions] || "wl.signin, wl.basic, wl.birthday , wl.emails ,wl.contacts_birthday , wl.contacts_photos, wl.contacts_emails"
         @auth_token_path = "/oauth20_token.srf"
+        @contacts_host = "apis.live.net"
         @contacts_path = "/v5.0/me/contacts"
         @self_path = "/v5.0/me"
       end
