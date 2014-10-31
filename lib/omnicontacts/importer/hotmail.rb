@@ -48,6 +48,7 @@ module OmniContacts
             contact[:first_name] = normalize_name(entry['first_name'])
             contact[:last_name] = normalize_name(entry['last_name'])
             contact[:name] = normalize_name(entry['name'])
+            contact[:email] = parse_email(entry['emails'])
           end
           contact[:birthday] = birthday_format(entry['birth_month'], entry['birth_day'], entry['birth_year'])
           contact[:gender] = entry['gender']
